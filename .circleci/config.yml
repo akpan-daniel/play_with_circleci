@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.18
+    working_directory: /go/src/github.com/akpan-daniel/play_with_circleci
+    steps:
+      - checkout
+      - run: go test -v ./...
